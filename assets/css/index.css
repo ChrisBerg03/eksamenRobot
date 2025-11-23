@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 0;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.5rem;
+    color: #ffffff;
+    /* Keep logo white on video */
+    letter-spacing: 0.05em;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburgerMenu span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    /* Keep hamburger white on video */
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.videoBackground video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gradientOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.6) 100%);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    color: #ffffff;
+}
+
+.heroContent h1 {
+    font-family: 'Fugaz One', cursive;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    /* Remove gradient text for hero to match image style better or keep it subtle */
+    color: #ffffff;
+}
+
+.heroContent p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.btnPrimary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s;
+}
+
+.btnPrimary:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+#showcase {
+    padding: 8rem 0;
+    background-color: #f0f0f0;
+}
+
+.robotCard {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 10rem;
+}
+
+.robotCard.reverse {
+    flex-direction: row-reverse;
+}
+
+.robotImage {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Offset Color Block Effect */
+.robotImage::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.4s ease;
+}
+
+.robotCard.reverse .robotImage::before {
+    left: -20px;
+}
+
+/* Specific Card Colors */
+.cardPeach .robotImage::before {
+    background-color: #ffccb3;
+}
+
+.cardRed .robotImage::before {
+    background-color: #ef4444;
+}
+
+.cardBlue .robotImage::before {
+    background-color: #3b82f6;
+}
+
+.cardTeal .robotImage::before {
+    background-color: #14b8a6;
+}
+
+.cardYellow .robotImage::before {
+    background-color: #eab308;
+}
+
+.robotImage img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.robotCard:hover .robotImage img {
+    transform: translate(-10px, -10px);
+}
+
+.robotCard.reverse:hover .robotImage img {
+    transform: translate(10px, -10px);
+}
+
+.robotInfo {
+    flex: 0.8;
+}
+
+.robotInfo h2 {
+    font-family: 'Fugaz One', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.robotInfo p {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .robotCard,
+    .robotCard.reverse {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    .robotImage::before {
+        top: 10px;
+        left: 10px;
+    }
+
+    .robotCard.reverse .robotImage::before {
+        left: 10px;
+    }
+
+    .robotInfo {
+        padding: 0 1rem;
+    }
+
+}
