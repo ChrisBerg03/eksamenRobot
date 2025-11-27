@@ -22,7 +22,6 @@ ul {
 }
 
 img {
-    max-width: 100%;
     display: block;
 }
 
@@ -48,6 +47,9 @@ img {
     width: 100%;
     height: 100%;
     z-index: -1;
+
+    /* The video had a black line at the top and bottom, easy fix with scale */
+    scale: 1.01;
 }
 
 .videoBackground video {
@@ -56,6 +58,7 @@ img {
     object-fit: cover;
 }
 
+/* overlay for the video to make it darker */
 .gradientOverlay {
     position: absolute;
     top: 0;
@@ -64,13 +67,12 @@ img {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.6) 100%
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 100%
     );
 }
 
 .heroContent {
-    position: relative;
     z-index: 1;
     max-width: 800px;
     color: #ffffff;
@@ -91,7 +93,7 @@ img {
     max-width: 500px;
 }
 
-.btnPrimary {
+.btnExplore {
     display: inline-block;
     padding: 1rem 2rem;
     background-color: rgba(255, 255, 255, 0.2);
@@ -102,13 +104,14 @@ img {
     transition: all 0.3s;
 }
 
-.btnPrimary:hover {
+.btnExplore:hover {
+    cursor: pointer;
     background-color: #ffffff;
     color: #1a1a1a;
     transform: translateY(-2px);
 }
 
-#showcase {
+#robotShowcase {
     padding: 8rem 0;
     background-color: #f0f0f0;
 }
@@ -138,7 +141,6 @@ img {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: transform 0.4s ease;
 }
 
 .reverse .robotImage::before {
@@ -199,9 +201,9 @@ img {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .heroContent h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .robotCard,
