@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "SegoeUiVF";
+    src: url("../fonts/SegoeUIVF.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "SegoeUiVF";
+}
+
+.containerPage1 {
+    display: flex;
+    width: 100vw;
+    height: 768px;
+    overflow: hidden;
+    position: relative;
+    /*border: 5px blue ridge;*/
+    margin: 0;
+}
+
+.imageContainer {
+    /*border: 5px ridge blue;*/
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    height: 768px;
+    width: 70%;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: url(/assets/images/entertainment-bakgrunn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ent-h1 {
+    position: absolute;
+    top: 15%;
+    left: 11%;
+    z-index: 1;
+}
+
+#unit-h1 {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+.headlinerP1Letters {
+    font-size: 63px;
+    color: rgb(255, 255, 255);
+}
+
+.blackBoxDiv {
+    background-color: rgb(75, 75, 75);
+    width: 30%;
+    height: 768px;
+    position: absolute;
+    left: 0%;
+    margin: 0;
+    z-index: -1;
+}
+
+.paragraphHeader {
+    color: rgb(255, 255, 255);
+    font-size: 37px;
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+    padding-left: 10px;
+}
+
+.informationRobot {
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 65%;
+    z-index: 1;
+    padding-left: 10px;
+}
+
+.containerPage2 {
+    background-color: rgb(217, 217, 217);
+    width: 100vw;
+    height: 1200px;
+    overflow: hidden;
+    position: relative;
+    /*border: 5px blue ridge;*/
+    margin: 0;
+    z-index: 0;
+}
+
+.headlinerP2Letters {
+    font-size: 50px;
+}
+
+#ent-h2 {
+    color: black;
+    font-weight: 100;
+    top: 6%;
+    left: 5%;
+    position: absolute;
+}
+
+#mp-h2 {
+    color: black;
+    top: 10%;
+    left: 8%;
+    position: absolute;
+}
+
+.imgContainerRight {
+    /*border: 5px blue ridge;*/
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+    top: 16%;
+    right: 11%;
+    position: absolute;
+    z-index: 2;
+}
+
+.imgContainerLeft {
+    /*border: 5px blue ridge;*/
+    width: 550px;
+    height: 307px;
+    overflow: hidden;
+    object-fit: cover;
+    bottom: 7%;
+    left: 8%;
+    position: absolute;
+    z-index: 2;
+}
+
+.txtContainerLeft {
+    /*border: 5px blue ridge;*/
+    width: 350px;
+    height: 325px;
+    top: 31%;
+    left: 14%;
+    position: absolute;
+    font-size: 25px;
+}
+
+.txtContainerRight {
+    /*border: 5px blue ridge;*/
+    width: 375px;
+    height: 300px;
+    bottom: 4%;
+    right: 7%;
+    position: absolute;
+    font-size: 22px;
+}
+
+.ezEu {
+    width: 300px;
+    height: 500px;
+}
+
+.imgBoxRight {
+    /*border: 5px blue ridge;*/
+    background-color: rgb(146, 105, 0);
+    width: 370px;
+    height: 200px;
+    top: 40%;
+    right: 10%;
+    position: absolute;
+    z-index: 1;
+}
+
+.imgBoxLeft {
+    background-color: rgb(116, 8, 8);
+    width: 500px;
+    height: 250px;
+    bottom: 4%;
+    left: 15%;
+    position: absolute;
+    z-index: 1;
+}
+
+/*animasjon for side 1*/
+
+@keyframes opacityP1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*overskrift*/
+.headlinerP1Letters {
+    /*forslag fra AI.kristiania*/
+    opacity: 0;
+    animation-name: opacityP1;
+    transform: translateX(-100px);
+    transition: opacity 0.5 ease-out, transform 0.5 ease-out;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/*tekstfelt*/
+.informationRobot {
+    opacity: 0;
+    animation-name: opacityP1;
+    transform: translateX(-100px);
+    transition: opacity 0.5 ease-out, transform 0.5 ease-out;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/*Avsnittsoverskrift*/
+.paragraphHeader {
+    opacity: 0;
+    animation-name: opacityP1;
+    transform: translateX(-100px);
+    transition: opacity 0.5 ease-out, transform 0.5 ease-out;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/*animasjon for venstre side-2*/
+@keyframes opacityP2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.imgContainerLeft,
+.txtContainerLeft,
+.imgBoxLeft {
+    opacity: 0;
+    transform: translateX(-700px);
+}
+
+.containerPage2:hover .imgContainerLeft,
+.containerPage2:hover .txtContainerLeft,
+.containerPage2:hover .imgBoxLeft {
+    animation-name: opacityP2;
+    transition: opacity 0.5 ease-out, transform 0.5 ease-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/*Animasjon for høyre side*/
+.imgContainerRight,
+.txtContainerRight,
+.imgBoxRight {
+    opacity: 0;
+    transform: translateX(+700px);
+}
+
+.containerPage2:hover .imgContainerRight,
+.containerPage2:hover .txtContainerRight,
+.containerPage2:hover .imgBoxRight {
+    animation-name: opacityP2;
+    transition: opacity 0.5 ease-out, transform 0.5 ease-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}

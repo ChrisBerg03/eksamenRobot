@@ -1,0 +1,312 @@
+@font-face {
+    font-family: "SegoeUIVF";
+    src: url("../fonts/SegoeUIVF.ttf");
+}
+
+body {
+    background-color: #e3e3e3;
+    font-family: "SegoeUiVF";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    display: flex;
+    gap: 16px;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* Container for the first page, that contributes to layout. */
+.pageOneContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Headliner and animation for headliner on page 1. */
+.pageHeadline1 {
+    margin-right: 10%;
+    color: #ffffff;
+    font-size: 90px;
+    animation: floatTextAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes floatTextAnimation {
+    from {
+        transform: translate(-10px);
+    }
+    to {
+        transform: translate(10px);
+    }
+}
+
+.pageHeadlineContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+/* Layout for the gray box on the right side of the screen. */
+#grayBox {
+    width: 25vw;
+    height: 100%;
+    background-color: #313131;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Text size and layout on page 1. */
+#pageOneText {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* The picture for page one, layout and gradiant. */
+.heroImg {
+    flex-grow: 1;
+    background-image: url("/assets/images/space1.jpeg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.heroImg::after {
+    display: block;
+    width: 75vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(97, 97, 97, 0.5) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+}
+
+/* Container for page two, layout. */
+.pageTwoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 40px 5%;
+    box-sizing: border-box;
+}
+
+/* Headline for page two, font size and layout. */
+#pageTwoHeader {
+    font-size: 65px;
+    text-align: right;
+    margin: 0;
+    padding-right: 2%;
+    z-index: 20;
+    color: #313131;
+}
+
+/* Container for the layout of the info cards. */
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Further layout for the info cards. */
+
+.infoCard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    background: transparent;
+    align-items: stretch;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+/* Layout and animation for the images on page two. */
+.pageTwoImages {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.pageTwoImages:hover {
+    width: 107%;
+}
+
+.pageTwoImageContainer {
+    position: relative;
+}
+
+.card1 .pageTwoImageContainer {
+    width: 30%;
+}
+
+.card2 .pageTwoImageContainer {
+    width: 40%;
+}
+
+.card3 .pageTwoImageContainer {
+    width: 40%;
+}
+
+.card2 {
+    justify-content: end;
+    align-items: flex-end;
+    margin-top: -70px;
+}
+
+/* Layout of the blue boxes. */
+.blueBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #9ac5cb;
+    bottom: -15px;
+    left: 15px;
+    z-index: -1;
+}
+
+.blueBoxContainer {
+    width: 100%;
+    position: relative;
+}
+
+.card1 .blueBoxContainer {
+    aspect-ratio: 1;
+}
+
+.card2 .blueBoxContainer {
+    aspect-ratio: 2660 / 1489;
+}
+
+.card3 .blueBoxContainer {
+    aspect-ratio: 1456 / 816;
+}
+
+.card2 .blueBox {
+    left: -15px;
+    aspect-ratio: 2660 / 735;
+    height: auto;
+}
+
+/* Layout and hover animation for the text on page two. */
+.pageTwoText {
+    color: #313131;
+    text-align: justify;
+    font-size: 17px;
+    line-height: 1.45;
+    margin: 10px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 40%;
+    transition: transform 0.3 ease,
+        /* box-shadow 0.3 ease, */ font-size 0.3 ease;
+}
+
+.pageTwoText:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.15); */
+    background: #e3e3e3;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/*footer*/
+.footer {
+    color: #ffffff;
+    background-color: #333;
+    padding: 20px 0;
+    font-size: 15px;
+    width: 100%;
+    max-width: 100%; /*juster deres max etter bredden på siden*/
+}
+
+.container-footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.section-about,
+.footer-section-link,
+.footer-section-authors {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.section-about h4,
+.footer-section-link h4,
+.footer-section-authors h4 {
+    margin-bottom: 10px;
+}
+
+.section-about p,
+.footer-section-link ul,
+.footer-section-authors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section-link ul {
+    padding-left: 0;
+}
+
+.footer-section-link li,
+.footer-section-authors li {
+    margin-bottom: 5px;
+}
+
+.footer-section-link a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section-link a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #444;
+    margin-top: 20px;
+}

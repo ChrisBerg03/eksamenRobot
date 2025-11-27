@@ -3,11 +3,156 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>EasyCorp - EZ-IU</title>
         <link rel="stylesheet" href="/assets/css/industrial.css" />
         <link rel="stylesheet" href="/assets/css/common.css" />
     </head>
-    <body></body>
-</html>
+    <body>
+        <header>
+            <div class="container headerContent">
+                <a class="logo" href="/index.html">
+                    <img
+                        id="logoImage"
+                        src="/assets/images/logo.png"
+                        alt="Logo Image for EasyCorp."
+                    />
+                </a>
 
-<!-- Soha -->
+                <!-- hamburger menu is generated with AI, same for the styling -->
+                <input type="checkbox" id="check" />
+                <label for="check" class="toggle">☰</label>
+                <ul class="nav">
+                    <li><a href="/pages/everyday.html">Everyday life</a></li>
+                    <li>
+                        <a href="/pages/entertainment.html">Entertainment</a>
+                    </li>
+                    <li><a href="/pages/research.html">Research</a></li>
+                    <li><a href="/pages/nature.html">Nature</a></li>
+                    <li><a href="/pages/industrial.html">Industrial</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="hero">
+            <img
+                src="Img/hero.png"
+                alt="Futuristic industrial facility with blue and yellow lighting"
+                class="heroImage"
+            />
+
+            <h1 class="heroTitle">INDUSTRIAL POWER</h1>
+
+            <p class="heroText">
+                The EZ-IU is a powerful autonomous industrial robot designed for
+                heavy lifting, production support, and reliable logistics in
+                demanding environments. Built for strength and precision, it
+                keeps operations running safely and efficiently - day and night.
+            </p>
+        </div>
+
+        <!-- MAIN -->
+        <main>
+            <!-- Section 1 -->
+            <section class="productSection">
+                <!-- Tekst på venstre side -->
+                <div class="infoSection">
+                    <p class="productName">EZ-IU INDUSTRIAL UNIT</p>
+                    <h2 class="infoTitle">
+                        Where Strength Meets Intelligence.
+                    </h2>
+                    <p class="infoSubTitle">
+                        Autonomous Robotics for Modern Industry
+                    </p>
+
+                    <p class="infoText">
+                        The EZ-IU brings
+                        <span class="infoHighlight">unmatched efficiency</span>
+                        to any industrial operation.
+                        <!-- KI hjelp til å fremheve ord -->
+                        With
+                        <span class="infoHighlight">
+                            intelligent navigation</span
+                        >, powerful load handling, and
+                        <span class="infoHighlight">fully autonomous</span>
+                        performance, it streamlines production and keeps your
+                        workflow moving without interruption. Engineered for
+                        reliability and built to last, the EZ-IU delivers
+                        <span class="infoHighlight">consistent results</span>
+                        that reduce downtime and maximize productivity.
+                    </p>
+                </div>
+
+                <!-- Bilde + boks på høyre side -->
+                <div class="robot1">
+                    <div class="robot1Frame">
+                        <div class="blueBox"></div>
+                        <video
+                            class="robotVideo"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                        >
+                            <source
+                                src="Video/industryUnit.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="productSection2">
+                <!-- Bilde + boks på venstre side -->
+                <div class="robot2">
+                    <div class="robot2Frame">
+                        <div class="blueBox2"></div>
+                        <img
+                            src="Img/industryUnits.jpg"
+                            alt="Picture of industrial units/ robots"
+                            class="robotImage"
+                        />
+                    </div>
+                </div>
+
+                <!-- Tekst på høyre side -->
+                <div class="techWrapper">
+                    <div class="techDetails">
+                        <h3 class="techTitle">EZ-IU PERFORMANCE MODULE</h3>
+                        <p class="techDescription">
+                            Designed for continuous industrial operation, the
+                            EZ-IU maintains precise movement, stable performance
+                            and reliable output in demanding environments.
+                        </p>
+
+                        <div class="techDivider"></div>
+                        <!-- Strek som skiller tekst -->
+
+                        <div class="specTitle">Specifications</div>
+                        <ul class="specList">
+                            <li>
+                                <span class="techLabel">Lift Capacity</span> Up
+                                to 1500 kg
+                            </li>
+                            <li>
+                                <span class="techLabel">Operating Time</span> 72
+                                hours
+                            </li>
+                            <li>
+                                <span class="techLabel">Max Speed</span> 25 km/h
+                            </li>
+                            <li>
+                                <span class="techLabel">Sensors</span> 360°
+                                lidar + thermal camera
+                            </li>
+                            <li>
+                                <span class="techLabel">Material</span>
+                                Reinforced steel composite
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

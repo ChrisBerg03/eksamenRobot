@@ -1,24 +1,54 @@
-.menu {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 0.5rem;
-    border-radius: 25px;
-    display: flex;
-    gap: 16px;
+/* The styling for the checkBox hack for the hamburger menu is generated with AI */
+#check {
+    position: absolute;
+    left: -9999px;
 }
 
-.menu a {
-    padding: 0.5rem 1.2rem;
-    background-color: rgba(255, 255, 255, 0.2);
+.headerContent .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem 1.3rem;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.headerContent #check:checked ~ .nav {
+    display: flex;
+}
+
+.toggle {
+    z-index: 100;
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+    user-select: none;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+
+.nav li a {
+    width: 125px;
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     font-weight: 600;
-    border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
 }
 
-.menu a:hover {
-    background-color: #ffffff;
-    color: #1a1a1a;
+.nav li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
 }
 
@@ -31,17 +61,24 @@ header {
     padding: 2rem 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .headerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-family: "Fugaz One", cursive;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
     color: #ffffff;
 }
@@ -49,4 +86,80 @@ header {
 .logo img {
     height: 32px;
     width: auto;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer {
+    color: #ffffff;
+    background-color: #333;
+    padding: 20px 0;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFooterContent {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    max-width: 90vw;
+}
+
+.containerFooterContent div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sectionAbout,
+.footerSectionLink,
+.footerSectionAuthors {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.sectionAbout h4,
+.footerSectionLink h4,
+.footerSectionAuthors h4 {
+    margin-bottom: 10px;
+}
+
+.sectionAbout p,
+.footerSectionLink ul,
+.footerSectionAuthors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footerSectionLink ul {
+    padding-left: 0;
+}
+
+.footerSectionLink li,
+.footerSectionAuthors li {
+    margin-bottom: 5px;
+}
+
+.footerSectionLink a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footerSectionLink a:hover {
+    text-decoration: underline;
+}
+
+.footerBottom {
+    width: 100vw;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #444;
+    margin-top: 20px;
 }

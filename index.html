@@ -4,12 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>easyCorp | Future of Robotics</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" href="/assets/css/index.css" />
         <link rel="stylesheet" href="/assets/css/common.css" />
     </head>
@@ -17,20 +11,28 @@
     <body>
         <header>
             <div class="container headerContent">
-                <div class="logo">
-                    <img src="/assets/images/Logo.png" alt="easyCorp Logo" />
-                    <span>easyCorp</span>
-                </div>
-                <nav class="menu">
-                    <a href="#">Robot1</a>
-                    <a href="#">Robot2</a>
-                    <a href="#">Robot3</a>
-                    <a href="#">Robot4</a>
-                    <a href="#">Robot5</a>
-                </nav>
+                <a class="logo" href="/index.html">
+                    <img
+                        id="logoImage"
+                        src="/assets/images/logo.png"
+                        alt="Logo Image for EasyCorp."
+                    />
+                </a>
+
+                <!-- hamburger menu is generated with AI, same for the styling -->
+                <input type="checkbox" id="check" />
+                <label for="check" class="toggle">☰</label>
+                <ul class="nav">
+                    <li><a href="/pages/everyday.html">Everyday life</a></li>
+                    <li>
+                        <a href="/pages/entertainment.html">Entertainment</a>
+                    </li>
+                    <li><a href="/pages/research.html">Research</a></li>
+                    <li><a href="/pages/nature.html">Nature</a></li>
+                    <li><a href="/pages/industrial.html">Industrial</a></li>
+                </ul>
             </div>
         </header>
-
         <main>
             <section class="hero">
                 <div class="videoBackground">
@@ -58,7 +60,7 @@
                     <div class="robotCard cardPeach">
                         <div class="robotImage">
                             <img
-                                src="/assets/images/everyday.png"
+                                src="/assets/images/ecEzWater.png"
                                 alt="EZ Robot"
                             />
                         </div>
@@ -90,7 +92,7 @@
                     <div class="robotCard cardBlue">
                         <div class="robotImage">
                             <img
-                                src="/assets/images/nano.png"
+                                src="/assets/images/robot-medium.jpeg"
                                 alt="Medical Robot"
                             />
                         </div>
@@ -106,7 +108,7 @@
                     <div class="robotCard reverse cardTeal">
                         <div class="robotImage">
                             <img
-                                src="/assets/images/nature.png"
+                                src="/assets/images/nature2.png"
                                 alt="Nature Robot"
                             />
                         </div>
@@ -130,12 +132,81 @@
                             />
                         </div>
                         <div class="robotInfo">
-                            <h2>iu</h2>
-                            <p>Industrial power, refined for the modern age.</p>
+                            <h2>INDUSTRIAL UNIT</h2>
+                            <p>
+                                The EZ-IU is a powerful autonomous industrial
+                                robot designed for heavy lifting, production
+                                support, and reliable logistics in demanding
+                                environments.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <footer class="footer">
+            <div class="containerFooterContent">
+                <div class="sectionAbout footerInfo">
+                    <div>
+                        <h4>About Us</h4>
+                        <p>
+                            EasyCorp is dedicated <br />
+                            to creating innovative <br />
+                            robotic solutions that solves <br />
+                            daily tasks for people worldwide.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footerSectionLink footerInfo">
+                    <div>
+                        <h4>Quick links</h4>
+                        <ul>
+                            <li><a href="#">Homepage</a></li>
+                            <h4>Other models</h4>
+                            <ul>
+                                <li>
+                                    <a href="/pages/everyday.html"
+                                        >Everyday life</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="/pages/entertainment.html"
+                                        >Entertainment</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="/pages/research.html">Research</a>
+                                </li>
+                                <li><a href="/pages/nature.html">Nature</a></li>
+                                <li>
+                                    <a href="/pages/industrial.html"
+                                        >Industrial</a
+                                    >
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footerSectionAuthors footerInfo">
+                    <div>
+                        <h4>Authors:</h4>
+                        <ul>
+                            <li>Chris</li>
+                            <li>Emilie</li>
+                            <li>Magnus</li>
+                            <li>Amanda</li>
+                            <li>Michael</li>
+                            <li>Soha</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footerBottom">
+                <p>&copy; 2049 EasyCorp. All rights reserved.</p>
+            </div>
+        </footer>
     </body>
 </html>

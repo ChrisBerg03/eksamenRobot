@@ -1,0 +1,308 @@
+/*base*/
+body {
+    margin: 0;
+    font-family: "Segoe UI Variable", "Segoe UI", "Inter", Arial, sans-serif;
+    background: #0d0d14;
+    color: #e6e6e6;
+    scroll-behavior: smooth;
+}
+
+/*frontpage*/
+.frontpageSection {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.frontpageImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frontpageText {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    padding-left: 55px;
+}
+
+.frontpageText h1 {
+    font-size: 95px;
+    margin: 0;
+    color: white;
+}
+
+.glow {
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.8),
+        0 0 38px rgba(150, 150, 255, 0.6);
+}
+
+.frontpageText .sub {
+    margin-top: 5px;
+    font-size: 32px;
+    color: #dcd6ff;
+}
+
+.frontpageText .concept {
+    margin-top: 25px;
+    max-width: 420px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*content*/
+.contentSection {
+    background: #f5f3ff;
+    color: #222;
+    padding: 100px 60px;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 80px;
+    color: #2a2240;
+}
+
+/*robot layout*/
+.contentBlock {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 110px;
+}
+
+.contentBlock.right {
+    flex-direction: row-reverse;
+}
+
+.contentImage {
+    width: 36%;
+    border-radius: 14px;
+    transition: 0.4s ease;
+}
+
+.contentText {
+    width: 58%;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background: #7a63ff;
+    margin: 12px 0 18px;
+    border-radius: 2px;
+}
+
+.tagline {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.robotDesc {
+    position: relative;
+    padding-left: 18px;
+    font-weight: 600;
+    color: #3a3156;
+}
+
+.robotDesc::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    background: #7a63ff;
+    border-radius: 50%;
+}
+
+/*hover effect*/
+/*this is generated with help from ai*/
+.robotCard {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.robotCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.robotCard:hover .contentImage {
+    transform: scale(1.05);
+}
+
+/*how*/
+.howSection {
+    background: #ece8ff;
+    color: #1e1830;
+    padding: 120px 60px;
+}
+
+.howContainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.howBox {
+    width: 28%;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.howBox:hover {
+    transform: translateY(-8px);
+}
+
+.howIcon {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 18px;
+    background: linear-gradient(135deg, #b69aff, #7a63ff);
+    border-radius: 50%;
+}
+
+.howIcon.two {
+    background: linear-gradient(135deg, #9ab2ff, #647aff);
+}
+.howIcon.three {
+    background: linear-gradient(135deg, #ff9aff, #c663ff);
+}
+
+/*footer*/
+.siteFooter {
+    text-align: center;
+    padding: 40px;
+    background: #0f0f19;
+    color: #b5aaff;
+}
+
+.footerColumns {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto 25px;
+}
+
+.footerCol h4 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footerCol ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.footerCol li {
+    margin-bottom: 6px;
+}
+
+.footerCol a {
+    color: #dcd6ff;
+    text-decoration: none;
+}
+
+.footerCol a:hover {
+    text-decoration: underline;
+}
+
+.footerBottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8f84ff;
+}
+
+/*fade animation*/
+/*this is generated with help from ai*/
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    40% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*tablet*/
+@media (max-width: 900px) {
+    .frontpageText {
+        width: 60%;
+        padding-left: 30px;
+    }
+
+    .frontpageText h1 {
+        font-size: 70px;
+    }
+
+    .contentBlock {
+        gap: 25px;
+    }
+    .contentImage {
+        width: 45%;
+    }
+    .contentText {
+        width: 50%;
+    }
+
+    .howBox {
+        width: 32%;
+    }
+}
+
+/*mobile stacking*/
+/*this is generated with help from ai*/
+@media (max-width: 600px) {
+    .frontpageText {
+        width: 90%;
+        padding-left: 20px;
+    }
+
+    .frontpageText h1 {
+        font-size: 52px;
+    }
+
+    .contentBlock {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 22px;
+    }
+
+    .contentImage {
+        width: 90%;
+    }
+    .contentText {
+        width: 100%;
+    }
+
+    .howContainer {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .howBox {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .footerColumns {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+}

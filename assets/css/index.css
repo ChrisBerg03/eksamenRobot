@@ -79,7 +79,7 @@ img {
 }
 
 .heroContent h1 {
-    font-family: "Fugaz One", cursive;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -187,7 +187,7 @@ img {
 }
 
 .robotInfo h2 {
-    font-family: "Fugaz One", cursive;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #1a1a1a;
